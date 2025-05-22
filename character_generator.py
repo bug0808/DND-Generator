@@ -1,5 +1,6 @@
 import random
 from spell_lists import spell_lists
+from spell_slots import ALL_SPELL_SLOTS
 
 # Can be part of the lightweight character generator or full character generator
 # This code generates a character with a set of stats based on the class chosen.
