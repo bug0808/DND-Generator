@@ -1,5 +1,5 @@
 import random
-from spell_lists import spell_lists
+from spell_lists import all_spells
 from spell_slots import ALL_SPELL_SLOTS
 
 # Can be part of the lightweight character generator or full character generator
@@ -237,31 +237,34 @@ backstory_table = {
 
 def get_npc_spells(char_class, char_level):
     npc_spells = {}
+    spell_slots = ALL_SPELL_SLOTS.get(char_class, {}).get(char_level, {})
+    # print(spell_slots)
+    # Warlock uses a different slot structure
+    if char_class == "Warlock":
+        slot_info = spell_slots
+        max_spell_level = slot_info.get("slot_level", 0)
+        slots = slot_info.get("slots", 0)
+        # Find all spells up to max_spell_level
+        available_spells = [spell for spell, info in all_spells.items()
+                            if char_class in info['classes'] and 1 <= info['level'] <= max_spell_level]
+        # Pick up to 'slots' spells
+        selected_spells = random.sample(available_spells, min(slots, len(available_spells)))
+        return {max_spell_level: selected_spells}
 
-    if char_class == "Wizard" and char_level in WIZARD_SPELL_SLOTS:
-        spell_counts = WIZARD_SPELL_SLOTS[char_level]
-        class_spells = spell_lists[char_class]
-        for lvl, count in spell_counts.items():
-            available = class_spells.get(lvl, [])
-            if available and count > 0:
-                npc_spells[lvl] = random.sample(available, min(count, len(available)))
-            else:
-                npc_spells[lvl] = []
-        return npc_spells
+    # For other classes
+    for lvl, num_slots in spell_slots.items():
+        if lvl == 0:  # Cantrips
+            # Find all cantrips for this class
+            cantrips = [spell for spell, info in all_spells.items()
+                        if char_class in info['classes'] and info['level'] == 0]
+            npc_spells[0] = random.sample(cantrips, min(num_slots, len(cantrips)))
+        else:
+            # Find all spells of this level for this class
+            spells = [spell for spell, info in all_spells.items()
+                      if char_class in info['classes'] and info['level'] == lvl]
+            npc_spells[lvl] = random.sample(spells, min(num_slots, len(spells)))
 
-    if char_class == "Paladin" and char_level in PALADIN_SPELL_SLOTS:
-        spell_counts = PALADIN_SPELL_SLOTS[char_level]
-        class_spells = spell_lists[char_class]
-        for lvl, count in spell_counts.items():
-            available = class_spells.get(lvl, [])
-            if available and count > 0:
-                npc_spells[lvl] = random.sample(available, min(count, len(available)))
-            else:
-                npc_spells[lvl] = []
-        return npc_spells
-
-    print(f"Class: {char_class}, Level: {char_level} - No spells available")
-    return {}
+    return npc_spells
 
 
 def get_from_table(roll, table):
@@ -287,7 +290,7 @@ def generate_stats_with_race(class_name, race_name, subrace):
     # Generate a randomized point array by simulating rolling 4d6 drop lowest for each stat
     def roll_stat():
         rolls = [random.randint(1, 6) for _ in range(4)]
-        print(sum(sorted(rolls)[1:]))
+        # print(sum(sorted(rolls)[1:]))
         return sum(sorted(rolls)[1:])  # Drop the lowest
 
     point_array = sorted([roll_stat() for _ in range(6)], reverse=True)
@@ -330,7 +333,7 @@ def generate_npc():
         race = get_from_table(random.randint(1, 100), race_table_exotic)
         print(race)
     subrace = roll_subrace(race)
-    print(subrace)
+    # print(subrace)
     backstory, background = backstory_table[backstory_roll]
 
     if char_class == "Dealer's Choice":
@@ -403,7 +406,7 @@ def generate_npc():
         "Stats": stats,
         "Backstory": backstory,
         "Background": background,
-        "Spells": get_npc_spells(char_class, char_level) if char_class == "Wizard" or char_class == "Paladin" else None
+        "Spells": get_npc_spells(char_class, char_level) if char_class in ALL_SPELL_SLOTS else None,
     }
 
 # Generate example NPC
@@ -417,3 +420,9 @@ print(n)
 #TODO: Change the way stats are displayed to follow D&D Conventions
 #TODO: Add backstory stats and proficiencies
 #TODO: Maybe add a chatgpt wrapper to allow for more complex backstories
+#TODO: Items and equipment
+#TODO: SUbclasses that add spells to character
+#TODO: FEATS
+#TODO: Add a way to generate a full character sheet
+#TODO: Factions and Guilds
+#TODO: FULL ADVENTURE GENERATOR
