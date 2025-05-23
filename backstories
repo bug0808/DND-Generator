@@ -1,0 +1,5 @@
+all_backstories = {
+    'Acolyte': {'Skills': ['Religion', 'Insight'], 'Proficiences': [], 'Languages': 2, 'Equipment': ['Holy Symbol', 'Prayer Book', 'Common Clothes'], 'Features': ['Shelter of the Faithful']},
+    'Anthropologist': {'Skills': ['Religion', 'Insight'], 'Proficiences': ['Cartographer/s Tools', 'Navigator/s Tools'], 'Languages': 2, 'Equipment': ['Diary', 'Bottle of ink', 'Ink pen', 'Traveler/s Clothes', 'Trinket'], 'Features': ['Cultural Chameleon', 'Adept Linguist']},
+    'Archaeologist': {'Skills': ['History', 'Survival'], 'Languages': 1, 'Equipment': ['Explorer/s Pack', 'Trinket'], 'Features': ['Tool Proficiency', 'Unearthed Secrets']},
+}

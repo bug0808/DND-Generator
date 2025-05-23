@@ -230,10 +230,6 @@ backstory_table = {
     # entries 11–50 similar pattern 
 }
 
-#SPELLS
-
-
-
 
 def get_npc_spells(char_class, char_level):
     npc_spells = {}
@@ -421,7 +417,7 @@ print(n)
 #TODO: Add backstory stats and proficiencies
 #TODO: Maybe add a chatgpt wrapper to allow for more complex backstories
 #TODO: Items and equipment
-#TODO: SUbclasses that add spells to character
+#TODO: Subclasses that add spells to character
 #TODO: FEATS
 #TODO: Add a way to generate a full character sheet
 #TODO: Factions and Guilds
