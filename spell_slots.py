@@ -216,3 +216,20 @@ ALL_SPELL_SLOTS = {
     "Paladin": PALADIN_SPELL_SLOTS,
     "Warlock": WARLOCK_SPELL_SLOTS,
 }
+
+import json
+
+# 1. Spell list
+from spell_lists import all_spells
+with open("all_spells.json", "w", encoding="utf-8") as f:
+    json.dump(all_spells, f, ensure_ascii=False, indent=2)
+
+# 2. Proficiencies
+from proficiences import proficiencies
+with open("proficiencies.json", "w", encoding="utf-8") as f:
+    json.dump(proficiencies, f, ensure_ascii=False, indent=2)
+
+# 3. Spell slots
+from spell_slots import ALL_SPELL_SLOTS
+with open("spell_slots.json", "w", encoding="utf-8") as f:
+    json.dump(ALL_SPELL_SLOTS, f, ensure_ascii=False, indent=2)

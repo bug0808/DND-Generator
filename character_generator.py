@@ -1,6 +1,19 @@
 import random
-from spell_lists import all_spells
-from spell_slots import ALL_SPELL_SLOTS
+import json
+import os
+
+# Helper to load JSON from the data directory
+def load_json(filename):
+    with open(os.path.join("data", filename), "r", encoding="utf-8") as f:
+        return json.load(f)
+
+all_spells = load_json("all_spells.json")
+ALL_SPELL_SLOTS = load_json("spell_slots.json")
+proficiencies = load_json("proficiencies.json")
+backstories = load_json("backstories.json")
+
+
+# This code is part of a character generator for Dungeons & Dragons 5th Edition.
 
 # Can be part of the lightweight character generator or full character generator
 # This code generates a character with a set of stats based on the class chosen.
@@ -212,29 +225,9 @@ racial_bonuses = {
     "Genasi": {"CON": 2},
 }
 
-#TODO: Edit to fit the common backstory table
-#TODO: Add more backstories
-#TODO CHANGE BACKSTORIES TO BE INDIVIDUAL TABLES TIED TO A BACKGROUND NOT THE OTHER WAY AROUND
-# Define a sample backstory table
-backstory_table = {
-    1: ("Escaped a noble family scandal; hiding under a false identity", "Charlatan"),
-    2: ("Grew up in a traveling circus as an acrobat and storyteller", "Entertainer"),
-    3: ("Was a squire to a fallen paladin; now seeks redemption", "Acolyte or Knight of the Order"),
-    4: ("Deserted the army after a tragic massacre", "Soldier"),
-    5: ("Spent a decade as a librarian in a ruined temple of knowledge", "Sage"),
-    6: ("Ex-convict turned bounty hunter", "Criminal or Urban Bounty Hunter"),
-    7: ("Born with a celestial birthmark believed to be an omen", "Acolyte or Haunted One"),
-    8: ("Ex-cultist turned truth-seeker", "Hermit or Acolyte"),
-    9: ("Ran a shady potion shop; wants to go “legit”", "Guild Artisan or Charlatan"),
-    10: ("Was shipwrecked as a child and raised by coastal druids", "Hermit or Far Traveler"),
-    # entries 11–50 similar pattern 
-}
-
-
 def get_npc_spells(char_class, char_level):
     npc_spells = {}
-    spell_slots = ALL_SPELL_SLOTS.get(char_class, {}).get(char_level, {})
-    # print(spell_slots)
+    spell_slots = ALL_SPELL_SLOTS.get(char_class, {}).get(str(char_level), {})
     # Warlock uses a different slot structure
     if char_class == "Warlock":
         slot_info = spell_slots
@@ -249,16 +242,17 @@ def get_npc_spells(char_class, char_level):
 
     # For other classes
     for lvl, num_slots in spell_slots.items():
-        if lvl == 0:  # Cantrips
-            # Find all cantrips for this class
+        lvl_int = int(lvl)
+        if lvl_int == 0:  # Cantrips
             cantrips = [spell for spell, info in all_spells.items()
                         if char_class in info['classes'] and info['level'] == 0]
-            npc_spells[0] = random.sample(cantrips, min(num_slots, len(cantrips)))
+            if cantrips:
+                npc_spells[0] = random.sample(cantrips, min(num_slots, len(cantrips)))
         else:
-            # Find all spells of this level for this class
             spells = [spell for spell, info in all_spells.items()
-                      if char_class in info['classes'] and info['level'] == lvl]
-            npc_spells[lvl] = random.sample(spells, min(num_slots, len(spells)))
+                      if char_class in info['classes'] and info['level'] == lvl_int]
+            if spells:
+                npc_spells[lvl_int] = random.sample(spells, min(num_slots, len(spells)))
 
     return npc_spells
 
@@ -314,12 +308,97 @@ def ability_score_increase(stats, char_level):
                 stats[stats_below_20[0][0]] = min(20, stats_below_20[0][1] + 1)
                 stats[stats_below_20[1][0]] = min(20, stats_below_20[1][1] + 1)
 
+def get_class_skill_proficiencies(char_class):
+    """Return a list of skill proficiencies for the given class, randomly chosen as per class rules."""
+    class_prof = proficiencies["Classes"].get(char_class, {})
+    skills_info = class_prof.get("skills", {})
+    num = skills_info.get("choose", 0)
+    options = skills_info.get("from", [])
+    if num and options:
+        return random.sample(options, min(num, len(options)))
+    return []
+
+def get_background_skill_proficiencies(background):
+    """Return a list of skill proficiencies for the given background."""
+    skills = []
+    for skill, info in proficiencies["Skills"].items():
+        if "Backgrounds" in info and background in info["Backgrounds"]:
+            skills.append(skill)
+    return skills
+
+
+def get_class_tool_proficiencies(char_class):
+    """Return a list of tool proficiencies for the given class, randomly chosen as per class rules."""
+    class_prof = proficiencies["Classes"].get(char_class, {})
+    tools_info = class_prof.get("tools", {})
+    profs = []
+    # Add fixed tools
+    profs.extend(tools_info.get("fixed", []))
+    # Handle "choose" from a list of tags/groups or a single group
+    choose = tools_info.get("choose", 0)
+    from_ = tools_info.get("from", [])
+    if choose and from_:
+        # If from_ is a string, treat as a single group/tag
+        if isinstance(from_, str):
+            from_ = [from_]
+        # Gather all tool names that match any tag/group in from_
+        tool_options = []
+        for tool_name, tool_info in proficiencies["Tools"].items():
+            if "Tags" in tool_info and any(tag in tool_info["Tags"] for tag in from_):
+                tool_options.append(tool_name)
+        if tool_options:
+            profs.extend(random.sample(tool_options, min(choose, len(tool_options))))
+    return profs
+
+def get_background_tool_proficiencies(background):
+    """Return a list of tool proficiencies for the given background."""
+    tools = []
+    for tool, info in proficiencies["Tools"].items():
+        if "Backgrounds" in info and background in info["Backgrounds"]:
+            tools.append(tool)
+    return tools
+
+def get_background_languages(background):
+    bg = proficiencies["Backgrounds"].get(background, {})
+    chosen_languages = []
+    # Gather all language options by tag
+    all_languages = proficiencies.get("Languages", {})
+    # Fixed languages (if any, and not tags)
+    for lang in bg.get("languages", []):
+        # If it's a tag, skip for now
+        if lang in ["Common", "Exotic"]:
+            continue
+        chosen_languages.append(lang)
+    # Handle language choices by tag
+    num_choices = bg.get("languages_choices", 0)
+    tags = [tag for tag in bg.get("languages", []) if tag in ["Common", "Exotic"]]
+    if num_choices and tags:
+        # Gather all languages with the specified tags
+        language_pool = [
+            lang for lang, info in all_languages.items()
+            if "Tags" in info and any(tag in info["Tags"] for tag in tags)
+        ]
+        # Avoid duplicates
+        language_pool = [l for l in language_pool if l not in chosen_languages]
+        if len(language_pool) >= num_choices:
+            chosen_languages += random.sample(language_pool, num_choices)
+        else:
+            chosen_languages += language_pool
+    return chosen_languages
+
+def get_race_languages(race):
+    all_languages = proficiencies.get("Languages", {})
+    race_languages = []
+    for lang, info in all_languages.items():
+        if "Races" in info and race in info["Races"]:
+            race_languages.append(lang)
+    return race_languages
 
 def generate_npc():
     class_roll = random.randint(1, 100)
     print(f"Class Roll: {class_roll}")
     race_roll = random.randint(1, 100)
-    backstory_roll = random.randint(1, 10)
+    backstory_roll = str(random.randint(1, len(backstories)))
 
     char_class = get_from_table(class_roll, class_table)
     print(f"Class: {char_class}")
@@ -330,7 +409,11 @@ def generate_npc():
         print(race)
     subrace = roll_subrace(race)
     # print(subrace)
-    backstory, background = backstory_table[backstory_roll]
+    
+    # Get backstory and background from JSON
+    backstory = backstories[backstory_roll]["backstory"]
+    background = backstories[backstory_roll]["background"]
+
 
     if char_class == "Dealer's Choice":
         char_class = random.choice(list(stat_profiles.keys()))
@@ -392,6 +475,30 @@ def generate_npc():
         case _:
             pass  # Placeholder for class-specific features
 
+
+    # --- Skill proficiency logic with overlap handling ---
+    class_skills = get_class_skill_proficiencies(char_class)
+    background_skills = get_background_skill_proficiencies(background)
+    all_skills = set(class_skills + background_skills)
+
+    # Ensure the character gets the full number of class skill proficiencies
+    class_prof = proficiencies["Classes"].get(char_class, {})
+    skills_info = class_prof.get("skills", {})
+    num_class_skills = skills_info.get("choose", 0)
+    class_skill_options = set(skills_info.get("from", []))
+
+    # Remove any skills already granted by background from the class options
+    available_for_class = list(class_skill_options - set(background_skills))
+    # Add more class skills if overlap reduced the number
+    while len(all_skills) < num_class_skills + len(background_skills) and available_for_class:
+        new_skill = random.choice(available_for_class)
+        all_skills.add(new_skill)
+        available_for_class.remove(new_skill)
+
+    # --- Tool proficiency logic (optional: similar overlap handling can be added) ---
+    tool_profs = set(get_class_tool_proficiencies(char_class) + get_background_tool_proficiencies(background))
+
+
     return {
         "Name": f"NPC_{random.randint(1, 1000)}",  # Placeholder for name generation
         "Level": char_level,
@@ -402,7 +509,10 @@ def generate_npc():
         "Stats": stats,
         "Backstory": backstory,
         "Background": background,
+        "Skill Proficiencies": list(all_skills),
+        "Tool Proficiencies": list(tool_profs),
         "Spells": get_npc_spells(char_class, char_level) if char_class in ALL_SPELL_SLOTS else None,
+        "Languages": get_background_languages(background) + get_race_languages(race)
     }
 
 # Generate example NPC
@@ -414,7 +524,6 @@ print(n)
 #TODO: Add a way to delete the generated NPC
 #TODO: Add a way to view the generated NPC
 #TODO: Change the way stats are displayed to follow D&D Conventions
-#TODO: Add backstory stats and proficiencies
 #TODO: Maybe add a chatgpt wrapper to allow for more complex backstories
 #TODO: Items and equipment
 #TODO: Subclasses that add spells to character

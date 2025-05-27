@@ -1,0 +1,602 @@
+{
+   "1": {
+    "backstory": "Escaped a noble family scandal; hiding under a false identity",
+    "background": "Charlatan"
+  },
+  "2": {
+    "backstory": "Grew up in a traveling circus as an acrobat and storyteller",
+    "background": "Entertainer"
+  },
+  "3": {
+    "backstory": "Was a squire to a fallen paladin; now seeks redemption",
+    "background": "Knight of the Order"
+  },
+  "4": {
+    "backstory": "Deserted the army after a tragic massacre",
+    "background": "Soldier"
+  },
+  "5": {
+    "backstory": "Spent a decade as a librarian in a ruined temple of knowledge",
+    "background": "Sage"
+  },
+  "6": {
+    "backstory": "Ex-convict turned bounty hunter",
+    "background": "Urban Bounty Hunter"
+  },
+  "7": {
+    "backstory": "Born with a celestial birthmark believed to be an omen",
+    "background": "Haunted One"
+  },
+  "8": {
+    "backstory": "Ex-cultist turned truth-seeker",
+    "background": "Hermit"
+  },
+  "9": {
+    "backstory": "Ran a shady potion shop; wants to go legit",
+    "background": "Guild Artisan"
+  },
+  "10": {
+    "backstory": "Was shipwrecked as a child and raised by coastal druids",
+    "background": "Hermit"
+  },
+  "11": {
+    "backstory": "Apprenticed to a legendary blacksmith, but never finished training",
+    "background": "Guild Artisan"
+  },
+  "12": {
+    "backstory": "Grew up on the streets, surviving by wit and luck",
+    "background": "Urchin"
+  },
+  "13": {
+    "backstory": "Served as a scribe for a powerful wizard",
+    "background": "Sage"
+  },
+  "14": {
+    "backstory": "Was a member of a notorious thieves' guild",
+    "background": "Criminal"
+  },
+  "15": {
+    "backstory": "Raised in a remote monastery, seeking enlightenment",
+    "background": "Acolyte"
+  },
+  "16": {
+    "backstory": "Former gladiator who seeks a new life",
+    "background": "Gladiator"
+  },
+  "17": {
+    "backstory": "Lost everything to a dragon attack, now seeks revenge",
+    "background": "Folk Hero"
+  },
+  "18": {
+    "backstory": "Studied ancient ruins for years, obsessed with lost civilizations",
+    "background": "Archaeologist"
+  },
+  "19": {
+    "backstory": "Once a pirate, now trying to walk an honest path",
+    "background": "Sailor"
+  },
+  "20": {
+    "backstory": "Was a healer in a war-torn village",
+    "background": "Folk Hero"
+  },
+  "21": {
+    "backstory": "Grew up in a family of monster hunters",
+    "background": "Haunted One"
+  },
+  "22": {
+    "backstory": "Worked as a cook in a noble household",
+    "background": "Guild Artisan"
+  },
+  "23": {
+    "backstory": "Was a stable hand who befriended a magical beast",
+    "background": "Folk Hero"
+  },
+  "24": {
+    "backstory": "Spent years as a traveling merchant",
+    "background": "Guild Artisan"
+  },
+  "25": {
+    "backstory": "Escaped from a cult that worshipped a dark power",
+    "background": "Hermit"
+  },
+  "26": {
+    "backstory": "Served as a scout for a famous adventuring party",
+    "background": "Outlander"
+  },
+  "27": {
+    "backstory": "Was a renowned chef in a bustling city",
+    "background": "Guild Artisan"
+  },
+  "28": {
+    "backstory": "Grew up in a remote fishing village",
+    "background": "Fisher"
+  },
+  "29": {
+    "backstory": "Was a messenger for a secretive organization",
+    "background": "Spy"
+  },
+  "30": {
+    "backstory": "Trained as a court jester in a royal palace",
+    "background": "Entertainer"
+  },
+  "31": {
+    "backstory": "Lived among nomads, learning their ways",
+    "background": "Outlander"
+  },
+  "32": {
+    "backstory": "Worked as a city guard before being dismissed",
+    "background": "Soldier"
+  },
+  "33": {
+    "backstory": "Was a failed apprentice to a famous alchemist",
+    "background": "Guild Artisan"
+  },
+  "34": {
+    "backstory": "Survived a magical catastrophe in their hometown",
+    "background": "Haunted One"
+  },
+  "35": {
+    "backstory": "Was a scribe for a corrupt official",
+    "background": "Sage"
+  },
+  "36": {
+    "backstory": "Grew up in a family of traveling performers",
+    "background": "Entertainer"
+  },
+  "37": {
+    "backstory": "Was a gravedigger in a haunted cemetery",
+    "background": "Haunted One"
+  },
+  "38": {
+    "backstory": "Worked as a cook on a merchant ship",
+    "background": "Sailor"
+  },
+  "39": {
+    "backstory": "Was a member of a secret society",
+    "background": "Noble"
+  },
+  "40": {
+    "backstory": "Raised by wolves in the wild",
+    "background": "Outlander"
+  },
+  "41": {
+    "backstory": "Was a failed apprentice to a master thief",
+    "background": "Criminal"
+  },
+  "42": {
+    "backstory": "Served as a healer in a plague-ridden city",
+    "background": "Acolyte"
+  },
+  "43": {
+    "backstory": "Was a street artist known for controversial murals",
+    "background": "Entertainer"
+  },
+  "44": {
+    "backstory": "Worked as a miner in dangerous tunnels",
+    "background": "Guild Artisan"
+  },
+  "45": {
+    "backstory": "Was a squire to a disgraced knight",
+    "background": "Knight of the Order"
+  },
+  "46": {
+    "backstory": "Grew up in a family of renowned scholars",
+    "background": "Sage"
+  },
+  "47": {
+    "backstory": "Was a courier for a thieves' guild",
+    "background": "Criminal"
+  },
+  "48": {
+    "backstory": "Worked as a beast tamer in a traveling circus",
+    "background": "Entertainer"
+  },
+  "49": {
+    "backstory": "Was a lighthouse keeper on a remote coast",
+    "background": "Hermit"
+  },
+  "50": {
+    "backstory": "Served as a bodyguard for a wealthy merchant",
+    "background": "Soldier"
+  },
+  "51": {
+    "backstory": "Was a failed apprentice to a master bard",
+    "background": "Entertainer"
+  },
+  "52": {
+    "backstory": "Grew up in a family of renowned healers",
+    "background": "Acolyte"
+  },
+  "53": {
+    "backstory": "Was a fisherman on a cursed lake",
+    "background": "Fisher"
+  },
+  "54": {
+    "backstory": "Worked as a scribe in a magical library",
+    "background": "Sage"
+  },
+  "55": {
+    "backstory": "Was a member of a traveling caravan",
+    "background": "Outlander"
+  },
+  "56": {
+    "backstory": "Served as a cook in a military camp",
+    "background": "Soldier"
+  },
+  "57": {
+    "backstory": "Was a failed apprentice to a master wizard",
+    "background": "Sage"
+  },
+  "58": {
+    "backstory": "Grew up in a family of renowned blacksmiths",
+    "background": "Guild Artisan"
+  },
+  "59": {
+    "backstory": "Was a street performer in a bustling city",
+    "background": "Entertainer"
+  },
+  "60": {
+    "backstory": "Worked as a stable hand for a noble family",
+    "background": "Folk Hero"
+  },
+  "61": {
+    "backstory": "Was a failed apprentice to a master chef",
+    "background": "Guild Artisan"
+  },
+  "62": {
+    "backstory": "Grew up in a family of renowned hunters",
+    "background": "Outlander"
+  },
+  "63": {
+    "backstory": "Was a member of a secret order of spies",
+    "background": "Spy"
+  },
+  "64": {
+    "backstory": "Worked as a healer in a remote village",
+    "background": "Acolyte"
+  },
+  "65": {
+    "backstory": "Was a failed apprentice to a master thief",
+    "background": "Criminal"
+  },
+  "66": {
+    "backstory": "Grew up in a family of renowned performers",
+    "background": "Entertainer"
+  },
+  "67": {
+    "backstory": "Was a member of a traveling circus",
+    "background": "Entertainer"
+  },
+  "68": {
+    "backstory": "Worked as a cook in a noble household",
+    "background": "Guild Artisan"
+  },
+  "69": {
+    "backstory": "Was a failed apprentice to a master alchemist",
+    "background": "Guild Artisan"
+  },
+  "70": {
+    "backstory": "Grew up in a family of renowned sailors",
+    "background": "Sailor"
+  },
+  "71": {
+    "backstory": "Was a member of a secret order of assassins",
+    "background": "Criminal"
+  },
+  "72": {
+    "backstory": "Worked as a healer in a war-torn city",
+    "background": "Acolyte"
+  },
+  "73": {
+    "backstory": "Was a failed apprentice to a master bard",
+    "background": "Entertainer"
+  },
+  "74": {
+    "backstory": "Grew up in a family of renowned merchants",
+    "background": "Guild Artisan"
+  },
+  "75": {
+    "backstory": "Was a member of a traveling caravan",
+    "background": "Outlander"
+  },
+  "76": {
+    "backstory": "Worked as a cook in a bustling city",
+    "background": "Guild Artisan"
+  },
+  "77": {
+    "backstory": "Was a failed apprentice to a master wizard",
+    "background": "Sage"
+  },
+  "78": {
+    "backstory": "Grew up in a family of renowned blacksmiths",
+    "background": "Guild Artisan"
+  },
+  "79": {
+    "backstory": "Was a street performer in a bustling city",
+    "background": "Entertainer"
+  },
+  "80": {
+    "backstory": "Worked as a stable hand for a noble family",
+    "background": "Folk Hero"
+  },
+  "81": {
+    "backstory": "Was a failed apprentice to a master chef",
+    "background": "Guild Artisan"
+  },
+  "82": {
+    "backstory": "Grew up in a family of renowned hunters",
+    "background": "Outlander"
+  },
+  "83": {
+    "backstory": "Was a member of a secret order of spies",
+    "background": "Spy"
+  },
+  "84": {
+    "backstory": "Worked as a healer in a remote village",
+    "background": "Acolyte"
+  },
+  "85": {
+    "backstory": "Was a failed apprentice to a master thief",
+    "background": "Criminal"
+  },
+  "86": {
+    "backstory": "Grew up in a family of renowned performers",
+    "background": "Entertainer"
+  },
+  "87": {
+    "backstory": "Was a member of a traveling circus",
+    "background": "Entertainer"
+  },
+  "88": {
+    "backstory": "Worked as a cook in a noble household",
+    "background": "Guild Artisan"
+  },
+  "89": {
+    "backstory": "Was a failed apprentice to a master alchemist",
+    "background": "Guild Artisan"
+  },
+  "90": {
+    "backstory": "Grew up in a family of renowned sailors",
+    "background": "Sailor"
+  },
+  "91": {
+    "backstory": "Was a member of a secret order of assassins",
+    "background": "Criminal"
+  },
+  "92": {
+    "backstory": "Worked as a healer in a war-torn city",
+    "background": "Acolyte"
+  },
+  "93": {
+    "backstory": "Was a failed apprentice to a master bard",
+    "background": "Entertainer"
+  },
+  "94": {
+    "backstory": "Grew up in a family of renowned merchants",
+    "background": "Guild Artisan"
+  },
+  "95": {
+    "backstory": "Was a member of a traveling caravan",
+    "background": "Outlander"
+  },
+  "96": {
+    "backstory": "Worked as a cook in a bustling city",
+    "background": "Guild Artisan"
+  },
+  "97": {
+    "backstory": "Was a failed apprentice to a master wizard",
+    "background": "Sage"
+  },
+  "98": {
+    "backstory": "Grew up in a family of renowned blacksmiths",
+    "background": "Guild Artisan"
+  },
+  "99": {
+    "backstory": "Was a street performer in a bustling city",
+    "background": "Entertainer"
+  },
+  "100": {
+    "backstory": "Worked as a stable hand for a noble family",
+    "background": "Folk Hero"
+  },
+  "101": {
+  "backstory": "Traveled the world to study lost cultures and ancient languages.",
+  "background": "Anthropologist"
+},
+"102": {
+  "backstory": "Trained for years to compete in regional and national athletic competitions.",
+  "background": "Athlete"
+},
+"103": {
+  "backstory": "Served as a vigilant member of the city watch, keeping the peace in dangerous districts.",
+  "background": "City Watch"
+},
+"104": {
+  "backstory": "Learned the secrets of metal and stone as part of a proud dwarven crafting clan.",
+  "background": "Clan Crafter"
+},
+"105": {
+  "backstory": "Spent years in a secluded monastery, devoted to scholarly pursuits and ancient texts.",
+  "background": "Cloistered Scholar"
+},
+"106": {
+  "backstory": "Navigated the intrigues of noble courts as a trusted advisor and diplomat.",
+  "background": "Courtier"
+},
+"107": {
+  "backstory": "Lived a double life, hiding your true identity behind a mask.",
+  "background": "Faceless"
+},
+"108": {
+  "backstory": "Worked as an agent for a powerful faction, carrying out secret missions.",
+  "background": "Faction Agent"
+},
+"109": {
+  "backstory": "Journeyed far from home, exploring distant lands and strange customs.",
+  "background": "Far Traveler"
+},
+"110": {
+  "backstory": "Spent your youth wandering the Feywild, forever changed by its magic.",
+  "background": "Feylost"
+},
+"111": {
+  "backstory": "Born among giants, you struggled to find your place in a world not built for your size.",
+  "background": "Giant Foundling"
+},
+"112": {
+  "backstory": "Traveled with a caravan of giant merchants, learning the art of trade and barter.",
+  "background": "Giant Merchant"
+},
+"113": {
+  "backstory": "Served a powerful noble house, carrying out their will as a trusted agent.",
+  "background": "House Agent"
+},
+"114": {
+  "backstory": "Inherited a mysterious artifact that changed the course of your life.",
+  "background": "Inheritor"
+},
+"115": {
+  "backstory": "Uncovered the truth behind a string of crimes as a determined investigator.",
+  "background": "Investigator"
+},
+"116": {
+  "backstory": "Earned your knighthood through valor and service on the battlefield.",
+  "background": "Knight"
+},
+"117": {
+  "backstory": "Served aboard a warship, braving storms and sea monsters.",
+  "background": "Marine"
+},
+"118": {
+  "backstory": "Fought as a mercenary in countless battles, loyal only to your comrades.",
+  "background": "Mercenary Veteran"
+},
+"119": {
+  "backstory": "Born into nobility, you were raised with privilege and responsibility.",
+  "background": "Noble"
+},
+"120": {
+  "backstory": "Lived the life of a pirate, plundering ships and evading the law.",
+  "background": "Pirate"
+},
+"121": {
+  "backstory": "Received a great reward for a heroic deed, forever changing your fortunes.",
+  "background": "Rewarded"
+},
+"122": {
+  "backstory": "Lost everything in a disaster, now seeking to rebuild your life.",
+  "background": "Ruined"
+},
+"123": {
+  "backstory": "Learned the ancient art of rune carving from a reclusive master.",
+  "background": "Rune Carver"
+},
+"124": {
+  "backstory": "Built and repaired ships in a bustling port town.",
+  "background": "Shipwright"
+},
+"125": {
+  "backstory": "Smuggled goods and people across borders, always staying one step ahead of the law.",
+  "background": "Smuggler"
+},
+"126": {
+  "backstory": "Grew up among the Uthgardt tribes, learning their traditions and survival skills.",
+  "background": "Uthgardt Tribe Member"
+},
+"127": {
+  "backstory": "Raised in the opulent halls of Waterdeep, you learned the ways of high society.",
+  "background": "Waterdhavian Noble"
+},
+"128": {
+  "backstory": "Worked as a hand in the Witchlight Carnival, witnessing wonders and mysteries.",
+  "background": "Witchlight Hand"
+},
+"129": {
+  "backstory": "Was a scribe for a famous playwright, learning the art of words.",
+  "background": "Cloistered Scholar"
+},
+"130": {
+  "backstory": "Served as a royal chef, preparing feasts for the court.",
+  "background": "Guild Artisan"
+},
+"131": {
+  "backstory": "Was a renowned animal trainer in a traveling menagerie.",
+  "background": "Entertainer"
+},
+"132": {
+  "backstory": "Worked as a bodyguard for a notorious crime lord.",
+  "background": "Mercenary Veteran"
+},
+"133": {
+  "backstory": "Was a renowned cartographer, mapping uncharted lands.",
+  "background": "Far Traveler"
+},
+"134": {
+  "backstory": "Served as a diplomat, brokering peace between rival factions.",
+  "background": "Courtier"
+},
+"135": {
+  "backstory": "Was a renowned duelist, famous for your skill with a blade.",
+  "background": "Noble"
+},
+"136": {
+  "backstory": "Worked as a healer in a temple dedicated to a forgotten god.",
+  "background": "Acolyte"
+},
+"137": {
+  "backstory": "Was a renowned storyteller, captivating audiences with your tales.",
+  "background": "Entertainer"
+},
+"138": {
+  "backstory": "Worked as a merchant in a bustling trade city.",
+  "background": "Guild Artisan"
+},
+"139": {
+  "backstory": "Was a renowned hunter, tracking dangerous beasts.",
+  "background": "Outlander"
+},
+"140": {
+  "backstory": "Served as a spy for a rival kingdom.",
+  "background": "Spy"
+},
+"141": {
+  "backstory": "Was a renowned sculptor, creating masterpieces from stone.",
+  "background": "Guild Artisan"
+},
+"142": {
+  "backstory": "Worked as a ship's navigator, guiding vessels through treacherous waters.",
+  "background": "Sailor"
+},
+"143": {
+  "backstory": "Was a renowned herbalist, known for your healing remedies.",
+  "background": "Hermit"
+},
+"144": {
+  "backstory": "Served as a herald, announcing the arrival of nobles and royalty.",
+  "background": "Noble"
+},
+"145": {
+  "backstory": "Was a renowned jeweler, crafting intricate pieces for the wealthy.",
+  "background": "Guild Artisan"
+},
+"146": {
+  "backstory": "Worked as a bounty hunter, tracking down fugitives for gold.",
+  "background": "Urban Bounty Hunter"
+},
+"147": {
+  "backstory": "Was a renowned painter, capturing the beauty of the world on canvas.",
+  "background": "Entertainer"
+},
+"148": {
+  "backstory": "Served as a quartermaster on a merchant ship.",
+  "background": "Sailor"
+},
+"149": {
+  "backstory": "Was a renowned brewer, famous for your unique ales.",
+  "background": "Guild Artisan"
+},
+"150": {
+  "backstory": "Worked as a gravekeeper, tending to the resting places of the dead.",
+  "background": "Haunted One"
+}
+}

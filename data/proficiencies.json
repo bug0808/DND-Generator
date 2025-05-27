@@ -1,0 +1,1802 @@
+{
+  "Skills": {
+    "Religion": {
+      "Backgrounds": [
+        "Acolyte",
+        "Anthropologist",
+        "Cloistered Scholar",
+        "Haunted One",
+        "Hermit",
+        "Inheritor",
+        "Knight Of The Order"
+      ],
+      "Classes": [
+        "Cleric",
+        "Bard",
+        "Druid",
+        "Monk",
+        "Paladin",
+        "Sorcerer",
+        "Warlock",
+        "Wizard"
+      ]
+    },
+    "Survival": {
+      "Backgrounds": [
+        "Archaeologist",
+        "Folk Hero",
+        "Giant Foundling",
+        "Feylost",
+        "Fisher",
+        "Haunted One",
+        "Inheritor",
+        "Marine",
+        "Outlander",
+        "Ruined",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Ranger",
+        "Barbarian",
+        "Bard",
+        "Druid",
+        "Fighter"
+      ]
+    },
+    "Stealth": {
+      "Backgrounds": [
+        "Criminal",
+        "Ruined",
+        "Spy",
+        "Urban Bounty Hunter",
+        "Urchin"
+      ],
+      "Classes": [
+        "Rogue",
+        "Bard",
+        "Monk",
+        "Ranger"
+      ]
+    },
+    "Sleight of Hand": {
+      "Backgrounds": [
+        "Charlatan",
+        "Urchin",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Rogue",
+        "Artificer",
+        "Bard"
+      ]
+    },
+    "Performance": {
+      "Backgrounds": [
+        "Entertainer",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Rogue"
+      ]
+    },
+    "Persuasion": {
+      "Backgrounds": [
+        "Courtier",
+        "Guild Artisan",
+        "Guild Merchant",
+        "House Agent",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Mercenary Veteran",
+        "Rewarded",
+        "Urban Bounty Hunter",
+        "Waterdhavian Noble"
+      ],
+      "Classes": [
+        "Bard",
+        "Cleric",
+        "Paladin",
+        "Rogue",
+        "Sorcerer"
+      ]
+    },
+    "Perception": {
+      "Backgrounds": [
+        "Far Traveler",
+        "Investigator",
+        "Pirate",
+        "Sailor",
+        "Rune Carver",
+        "Shipwright"
+      ],
+      "Classes": [
+        "Ranger",
+        "Artificer",
+        "Barbarian",
+        "Bard",
+        "Druid",
+        "Fighter",
+        "Rogue"
+      ]
+    },
+    "Nature": {
+      "Backgrounds": [
+        "Cloistered Scholar",
+        "Knight Of The Order"
+      ],
+      "Classes": [
+        "Druid",
+        "Ranger",
+        "Artificer",
+        "Barbarian",
+        "Bard",
+        "Warlock"
+      ]
+    },
+    "Medicine": {
+      "Backgrounds": [
+        "Hermit"
+      ],
+      "Classes": [
+        "Cleric",
+        "Druid",
+        "Artificer",
+        "Bard",
+        "Paladin",
+        "Wizard"
+      ]
+    },
+    "Investigation": {
+      "Backgrounds": [
+        "Folk Hero",
+        "Haunted One",
+        "House Agent",
+        "Investigator"
+      ],
+      "Classes": [
+        "Rogue",
+        "Artificer",
+        "Bard",
+        "Ranger",
+        "Warlock",
+        "Wizard"
+      ]
+    },
+    "Insight": {
+      "Backgrounds": [
+        "Acolyte",
+        "Anthropologist",
+        "City Watch",
+        "Clan Crafter",
+        "Courtier",
+        "Faction Agent",
+        "Far Traveler",
+        "Guild Artisan",
+        "Guild Merchant",
+        "Investigator",
+        "Rewarded",
+        "Urban Bounty Hunter"
+      ],
+      "Classes": [
+        "Cleric",
+        "Rogue",
+        "Bard",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Sorcerer",
+        "Wizard"
+      ]
+    },
+    "Intimidation": {
+      "Backgrounds": [
+        "Giant Foundling",
+        "Folk Hero",
+        "Faceless",
+        "Solider"
+      ],
+      "Classes": [
+        "Fighter",
+        "Barbarian",
+        "Bard",
+        "Paladin",
+        "Rogue",
+        "Sorcerer",
+        "Warlock"
+      ]
+    },
+    "History": {
+      "Backgrounds": [
+        "Archaeologist",
+        "Clan Crafter",
+        "Cloistered Scholar",
+        "Fisher",
+        "Inheritor",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Rune Carver",
+        "Sage",
+        "Shipwright",
+        "Waterdhavian Noble"
+      ],
+      "Classes": [
+        "Wizard",
+        "Artificer",
+        "Bard",
+        "Cleric",
+        "Fighter",
+        "Monk",
+        "Warlock"
+      ]
+    },
+    "Deception": {
+      "Backgrounds": [
+        "Charlatan",
+        "Criminal",
+        "Faceless",
+        "Feylost",
+        "Smuggler",
+        "Spy",
+        "Urban Bounty Hunter"
+      ],
+      "Classes": [
+        "Rogue",
+        "Bard",
+        "Sorcerer",
+        "Warlock"
+      ]
+    },
+    "Acrobatics": {
+      "Backgrounds": [
+        "Athlete",
+        "Entertainer"
+      ],
+      "Classes": [
+        "Rogue",
+        "Bard",
+        "Fighter",
+        "Monk",
+        "Rogue"
+      ]
+    },
+    "Animal Handling": {
+      "Backgrounds": [
+        "Folk Hero"
+      ],
+      "Classes": [
+        "Ranger",
+        "Barbarian",
+        "Bard",
+        "Druid",
+        "Fighter"
+      ]
+    },
+    "Athletics": {
+      "Backgrounds": [
+        "Athlete",
+        "City Watch",
+        "Marine",
+        "Mercenary Veteran",
+        "Outlander",
+        "Pirate",
+        "Sailor",
+        "Smuggler",
+        "Solider",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Fighter",
+        "Barbarian",
+        "Bard",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue"
+      ]
+    },
+    "Arcana": {
+      "Backgrounds": [
+        "Cloistered Scholar",
+        "Haunted One",
+        "Inheritor",
+        "Knight Of The Order",
+        "Sage"
+      ],
+      "Classes": [
+        "Wizard",
+        "Artificer",
+        "Bard",
+        "Druid",
+        "Sorcerer",
+        "Warlock"
+      ]
+    }
+  },
+  "Tools": {
+    "Alchemist's Supplies": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools",
+        "Household Tools"
+      ]
+    },
+    "Bagpipes": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "Inheritor",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument"
+      ]
+    },
+    "Brewer's Supplies": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools",
+        "Household Tools"
+      ]
+    },
+    "Calligrapher's Supplies": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools",
+        "Household Tools"
+      ]
+    },
+    "Carpenter's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Shipwright",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Cartographer's Tools": {
+      "Backgrounds": [
+        "Anthropologist",
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Cook's Utensils": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools",
+        "Household Tools"
+      ]
+    },
+    "Dice Set": {
+      "Backgrounds": [
+        "Criminal",
+        "Far Traveler",
+        "House Agent",
+        "Inheritor",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Mercenary Veteran",
+        "Rewarded",
+        "Ruined",
+        "Solider",
+        "Spy",
+        "Urban Bounty Hunter",
+        "Waterdhavian Noble"
+      ],
+      "Tags": [
+        "Gaming Set",
+        "Household Tools"
+      ]
+    },
+    "Disguise Kit": {
+      "Backgrounds": [
+        "Charlatan",
+        "Entertainer",
+        "Faceless",
+        "House Agent",
+        "Investigator",
+        "Urchin",
+        "Witchlight Hand"
+      ],
+      "Tags": [
+        "Household Tools"
+      ]
+    },
+    "Dragonchess Set": {
+      "Backgrounds": [
+        "Criminal",
+        "Far Traveler",
+        "House Agent",
+        "Inheritor",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Mercenary Veteran",
+        "Rewarded",
+        "Ruined",
+        "Solider",
+        "Spy",
+        "Urban Bounty Hunter",
+        "Waterdhavian Noble"
+      ],
+      "Tags": [
+        "Gaming Set",
+        "Household Tools"
+      ]
+    },
+    "Drums": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "House Agent",
+        "Inheritor",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Flute": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "House Agent",
+        "Inheritor",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Forgery Kit": {
+      "Backgrounds": [
+        "Charlatan",
+        "House Agent"
+      ],
+      "Tags": [
+        "Household Tools"
+      ]
+    },
+    "Glassblower's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Herbalism Kit": {
+      "Backgrounds": [
+        "Hermit",
+        "House Agent"
+      ],
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Household Tools"
+      ]
+    },
+    "Horn": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "Inheritor",
+        "House Agent",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Jeweler's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Leatherworker's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Lute": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "Inheritor",
+        "House Agent",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Lyre": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "Inheritor",
+        "House Agent",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Mason's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Navigator's Tools": {
+      "Backgrounds": [
+        "Anthropologist",
+        "Guild Merchant",
+        "House Agent",
+        "Pirate",
+        "Sailor"
+      ],
+      "Tags": []
+    },
+    "Painter's Supplies": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Pan flute": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "House Agent",
+        "Inheritor",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Playing Card Set": {
+      "Backgrounds": [
+        "Criminal",
+        "Far Traveler",
+        "House Agent",
+        "Inheritor",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Mercenary Veteran",
+        "Rewarded",
+        "Ruined",
+        "Solider",
+        "Spy",
+        "Urban Bounty Hunter",
+        "Waterdhavian Noble"
+      ],
+      "Tags": [
+        "Gaming Set",
+        "Household Tools"
+      ]
+    },
+    "Poisoner's Kit": {
+      "Backgrounds": [
+        "House Agent"
+      ],
+      "Tags": [
+        "Household Tools"
+      ]
+    },
+    "Potter's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Shawm": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "Inheritor",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Household Tools"
+      ]
+    },
+    "Smith's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Thieves' Tools": {
+      "Backgrounds": [
+        "Criminal",
+        "House Agent",
+        "Investigator",
+        "Spy",
+        "Urban Bounty Hunter",
+        "Urchin"
+      ],
+      "Classes": [
+        "Rogue",
+        "Artificer"
+      ],
+      "Tags": [
+        "Household Tools"
+      ]
+    },
+    "Tinkerer's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "House Agent",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools",
+        "Household Tools"
+      ]
+    },
+    "Three-Dragon Ante Set": {
+      "Backgrounds": [
+        "Criminal",
+        "Far Traveler",
+        "Inheritor",
+        "House Agent",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Mercenary Veteran",
+        "Rewarded",
+        "Ruined",
+        "Solider",
+        "Spy",
+        "Urban Bounty Hunter",
+        "Waterdhavian Noble"
+      ],
+      "Tags": [
+        "Gaming Set",
+        "Household Tools"
+      ]
+    },
+    "Vehicle (Land)": {
+      "Backgrounds": [
+        "Athlete",
+        "Folk Hero",
+        "House Agent",
+        "Marine",
+        "Mercenary Veteran",
+        "Solider"
+      ],
+      "Tags": [
+        "Deneith",
+        "Orien",
+        "Vadalis"
+      ]
+    },
+    "Vehicle (Water)": {
+      "Backgrounds": [
+        "House Agent",
+        "Marine",
+        "Pirate",
+        "Sailor",
+        "Shipwright",
+        "Smuggler"
+      ],
+      "Tags": [
+        "Lyrandar"
+      ]
+    },
+    "Vehicle (Air)": {
+      "Backgrounds": [
+        "House Agent"
+      ],
+      "Tags": [
+        "Lyrandar"
+      ]
+    },
+    "Violin": {
+      "Backgrounds": [
+        "Entertainer",
+        "Far Traveler",
+        "Feylost",
+        "House Agent",
+        "Inheritor",
+        "Knight Of The Order",
+        "Outlander",
+        "Urban Bounty Hunter",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Bard",
+        "Monk"
+      ],
+      "Tags": [
+        "Musical Instrument",
+        "Phiarlan",
+        "Thuranni"
+      ]
+    },
+    "Weaver's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    },
+    "Woodcarver's Tools": {
+      "Backgrounds": [
+        "Clan Crafter",
+        "Folk Hero",
+        "Guild Artisan",
+        "Rune Carver",
+        "Uthgardt Tribe Member"
+      ],
+      "Classes": [
+        "Artificer",
+        "Monk"
+      ],
+      "Tags": [
+        "Artisan/s Tools"
+      ]
+    }
+  },
+  "Weapons": {
+    "Simple Weapons": {
+      "Classes": [
+        "Artificer",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Warlock"
+      ]
+    },
+    "Martial Weapons": {
+      "Classes": [
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger"
+      ]
+    },
+    "Hand Crossbows": {
+      "Classes": [
+        "Bard",
+        "Rogue"
+      ],
+      "Tags": [
+        "Crossbow"
+      ]
+    },
+    "Longswords": {
+      "Classes": [
+        "Bard",
+        "Rogue"
+      ],
+      "Tags": [
+        "Martial Weapon"
+      ]
+    },
+    "Rapiers": {
+      "Classes": [
+        "Bard",
+        "Rogue"
+      ],
+      "Tags": [
+        "Martial Weapon"
+      ]
+    },
+    "Shortswords": {
+      "Classes": [
+        "Bard",
+        "Rogue",
+        "Monk"
+      ],
+      "Tags": [
+        "Martial Weapon"
+      ]
+    },
+    "Clubs": {
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Daggers": {
+      "Classes": [
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Darts": {
+      "Classes": [
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Javelins": {
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Maces": {
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Quarterstaffs": {
+      "Classes": [
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Scimitars": {
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Martial Weapon"
+      ]
+    },
+    "Sickles": {
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Slings": {
+      "Classes": [
+        "Druid",
+        "Sorcerer",
+        "Wizard"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Spears": {
+      "Classes": [
+        "Druid"
+      ],
+      "Tags": [
+        "Simple Weapon"
+      ]
+    },
+    "Light Crossbows": {
+      "Classes": [
+        "Sorcerer",
+        "Wizard"
+      ],
+      "Tags": [
+        "Crossbow"
+      ]
+    }
+  },
+  "Armor": {
+    "Light Armor": {
+      "Classes": [
+        "Artificer",
+        "Barbarian",
+        "Bard",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger",
+        "Rogue",
+        "Warlock",
+        "Wizard"
+      ]
+    },
+    "Medium Armor": {
+      "Classes": [
+        "Artificer",
+        "Barbarian",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Paladin",
+        "Ranger"
+      ]
+    },
+    "Heavy Armor": {
+      "Classes": [
+        "Barbarian",
+        "Cleric",
+        "Fighter",
+        "Paladin"
+      ]
+    },
+    "Shields": {
+      "Classes": [
+        "Artificer",
+        "Barbarian",
+        "Cleric",
+        "Druid",
+        "Fighter",
+        "Monk",
+        "Paladin",
+        "Ranger"
+      ]
+    }
+  },
+  "Languages": {
+    "Two of your choice": {
+      "Backgrounds": [
+        "Acolyte",
+        "Anthropologist",
+        "City Watch",
+        "Cloistered Scholar",
+        "Courtier",
+        "Faction Agent",
+        "Guild Merchant",
+        "Sage"
+      ]
+    },
+    "One of your choice": {
+      "Backgrounds": [
+        "Archaeologist",
+        "Athlete",
+        "Giant Foundling",
+        "Clan Crafter",
+        "Folk Hero",
+        "Charlatan",
+        "Faceless",
+        "Far Traveler",
+        "Fisher",
+        "Guild Artisan",
+        "Haunted One",
+        "Hermit",
+        "Inheritor",
+        "Knight",
+        "Noble",
+        "Knight Of The Order",
+        "Outlander",
+        "Rewarded",
+        "Ruined",
+        "Uthgardt Tribe Member",
+        "Waterdhavian Noble",
+        "Witchlight Hand"
+      ],
+      "Classes": [
+        "Rogue",
+        "Fighter",
+        "Ranger"
+      ],
+      "Races": [
+        "High Elf",
+        "Half-Elf",
+        "Human"
+      ]
+    },
+    "Common": {
+      "Backgrounds": [],
+      "Races": [
+        "Dragonborn",
+        "Dwarf",
+        "Elf",
+        "Gnome",
+        "Half-Elf",
+        "Half-Orc",
+        "Halfling",
+        "Human",
+        "Tiefling"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Dwarvish": {
+      "Backgrounds": [
+        "Clan Crafter"
+      ],
+      "Races": [
+        "Dwarf"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Elvish": {
+      "Backgrounds": [
+        "Feylost"
+      ],
+      "Races": [
+        "Elf",
+        "Half-Elf"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Giant": {
+      "Backgrounds": [
+        "Giant Foundling",
+        "Rune Carver"
+      ]
+    },
+    "Gnomish": {
+      "Backgrounds": [
+        "Feylost"
+      ],
+      "Races": [
+        "Gnomes"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Goblin": {
+      "Backgrounds": [
+        "Feylost"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Halfling": {
+      "Backgrounds": [],
+      "Races": [
+        "Halfling"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Orc": {
+      "Backgrounds": [],
+      "Races": [
+        "Half-Orc"
+      ],
+      "Tags": [
+        "Common"
+      ]
+    },
+    "Sylvan": {
+      "Backgrounds": [
+        "Feylost",
+        "Haunted One"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Abyssal": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Infernal": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Races": [
+        "Tiefling"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Draconic": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Races": [
+        "Dragonborn"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Celestial": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Primordial": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Deep Speech": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    },
+    "Undercommon": {
+      "Backgrounds": [
+        "Haunted One"
+      ],
+      "Tags": [
+        "Exotic"
+      ]
+    }
+  },
+    "Classes": {
+    "Artificer": {
+      "skills": {
+        "choose": 2,
+        "from": ["Arcana", "History", "Investigation", "Medicine", "Nature", "Perception", "Religion"]
+      },
+      "tools": {
+        "fixed": ["Thieves' Tools", "Tinker's Tools"],
+        "choose": 1,
+        "from": "Artisan's Tools"
+      }
+    },
+    "Barbarian": {
+      "skills": {
+        "choose": 2,
+        "from": ["Animal Handling", "Athletics", "Intimidation", "Nature", "Perception", "Survival"]
+      }
+    },
+    "Bard": {
+      "skills": {
+        "choose": 3,
+        "from": [
+          "Acrobatics", "Animal Handling", "Arcana", "Athletics", "Deception", "History",
+          "Insight", "Intimidation", "Investigation", "Medicine", "Nature", "Perception",
+          "Performance", "Persuasion", "Religion", "Sleight of Hand", "Stealth", "Survival"
+        ]
+      },
+      "tools": {
+        "choose": 3,
+        "from": ["Musical Instrument"]
+      }
+    },
+    "Cleric": {
+      "skills": {
+        "choose": 2,
+        "from": ["History", "Insight", "Medicine", "Persuasion", "Religion"]
+      }
+    },
+    "Druid": {
+      "skills": {
+        "choose": 2,
+        "from": ["Arcana", "Animal Handling", "Insight", "Medicine", "Nature", "Perception", "Religion", "Survival"]
+      },
+      "tools": {
+        "fixed": ["Herbalism Kit"]
+      }
+    },
+    "Fighter": {
+      "skills": {
+        "choose": 2,
+        "from": ["Acrobatics", "Animal Handling", "Athletics", "History", "Insight", "Intimidation", "Perception", "Survival"]
+      }
+    },
+    "Monk": {
+      "skills": {
+        "choose": 2,
+        "from": ["Acrobatics", "Athletics", "History", "Insight", "Religion", "Stealth"]
+      },
+      "tools": {
+        "choose": 1,
+        "from": ["Artisan's Tools", "Musical Instrument"]
+      }
+    },
+    "Paladin": {
+      "skills": {
+        "choose": 2,
+        "from": ["Athletics", "Insight", "Intimidation", "Medicine", "Persuasion", "Religion"]
+      }
+    },
+    "Ranger": {
+      "skills": {
+        "choose": 3,
+        "from": ["Animal Handling", "Athletics", "Insight", "Investigation", "Nature", "Perception", "Stealth", "Survival"]
+      }
+    },
+    "Rogue": {
+      "skills": {
+        "choose": 4,
+        "from": [
+          "Acrobatics", "Athletics", "Deception", "Insight", "Intimidation", "Investigation",
+          "Perception", "Performance", "Persuasion", "Sleight of Hand", "Stealth"
+        ]
+      },
+      "tools": {
+        "fixed": ["Thieves' Tools"]
+      }
+    },
+    "Sorcerer": {
+      "skills": {
+        "choose": 2,
+        "from": ["Arcana", "Deception", "Insight", "Intimidation", "Persuasion", "Religion"]
+      }
+    },
+    "Warlock": {
+      "skills": {
+        "choose": 2,
+        "from": ["Arcana", "Deception", "History", "Intimidation", "Investigation", "Nature", "Religion"]
+      }
+    },
+    "Wizard": {
+      "skills": {
+        "choose": 2,
+        "from": ["Arcana", "History", "Insight", "Investigation", "Medicine", "Religion"]
+      }
+    }
+  },
+  "Backgrounds": {
+    "Acolyte": {
+      "skills": ["Insight", "Religion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2,
+      "tools": []
+    },
+    "Anthropologist": {
+      "skills": ["History", "Insight"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2,
+      "tools": []
+    },
+    "Archaeologist": {
+      "skills": ["History", "Investigation"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Cartographer's Tools", "Navigator's Tools"],
+      "tool_choices": 1
+    },
+    "Athlete": {
+      "skills": ["Acrobatics", "Athletics"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Vehicle (Land)"]
+    },
+    "Charlatan": {
+      "skills": ["Deception", "Sleight of Hand"],
+      "languages": [],
+      "tools": ["Disguise Kit", "Forgery Kit"]
+    },
+    "City Watch": {
+      "skills": ["Insight", "Perception"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": []
+    },
+    "Clan Crafter": {
+      "skills": ["History", "Insight"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Artisan's Tools"],
+      "tool_choices": 1
+    },
+    "Cloistered Scholar": {
+      "skills": ["History"],
+      "skills_choices": 1,
+      "skills_options": ["Arcana", "Nature", "Religion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2,
+      "tools": [] 
+    },
+    "Courtier": {
+      "skills": ["Insight", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2,
+      "tools": []
+    },
+    "Criminal": {
+      "skills": ["Deception", "Stealth"],
+      "languages": [],
+      "tools": ["Thieves' Tools", "Gaming Set"] 
+    },
+    "Entertainer": {
+      "skills": ["Acrobatics", "Performance"],
+      "languages": [],
+      "tools": ["Musical Instrument", "Disguise Kit"] 
+    },
+    "Faceless": {
+      "skills": ["Deception", "Intimidation"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Disguise Kit"]
+    },
+    "Faction Agent": {
+      "skills": ["Insight"],
+      "skills_choices": 1,
+      "skills_options": ["Arcana", "History", "Nature", "Religion", "Animal Handling", "Medicine", "Perception", "Survival", "Deception", "Intimidation", "Performance", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2,
+      "tools": []
+    },
+    "Far Traveler": {
+      "skills": ["Insight", "Perception"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument", "Gaming Set"],
+      "tool_choices": 1
+    },
+    "Feylost": {
+      "skills": ["Deception", "Survival"],
+      "languages": ["Elvish", "Gnomish", "Goblin", "Sylvan"], 
+      "languages_choices": 1,
+      "tools": ["Musical Instrument"],
+      "tool_choices": 1
+    },
+    "Fisher": {
+      "skills": ["History", "Survival"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": []
+    },
+    "Folk Hero": {
+      "skills": ["Animal Handling", "Survival"],
+      "languages": [],
+      "tools": ["Artisan's Tools", "Vehicle (Land)"],
+      "tool_choices": 1
+    },
+    "Giant Foundling": {
+      "skills": ["Intimidation", "Survival"],
+      "languages": ["Giant"],
+      "tools": []
+    },
+    "Guild Artisan": {
+      "skills": ["Insight", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Artisan's Tools"],
+      "tool_choices": 1
+    },
+    "Guild Merchant": {
+      "skills": ["Insight", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Navigator's Tools" ]
+    },
+    "Haunted One": {
+      "skills": [],
+      "skills_choices": 2,
+      "skills_options": ["Arcana", "Investigation", "Religion", "Survival"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2, 
+      "tools": []
+    },
+    "Hermit": {
+      "skills": ["Medicine", "Religion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Herbalism Kit"]
+    },
+    "House Agent": {
+      "skills": ["Investigation", "Persuasion"],
+      "languages": [],
+      "tools": [] 
+    },
+    "Inheritor": {
+      "skills": ["Survival"],
+      "skills_choices": 1,
+      "skills_options": ["Arcana", "History", "Religion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument", "Gaming Set"],
+      "tool_choices": 1
+    },
+    "Investigator": {
+      "skills": [],
+      "skills_choices": 2,
+      "skills_options": ["Investigation", "Insight", "Perception"],
+      "languages": [],
+      "tools": ["Disguise Kit", "Thieves' Tools"]
+    },
+    "Knight": {
+      "skills": ["History", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Gaming Set"]
+    },
+    "Knight Of The Order": {
+      "skills": ["Persuasion"],
+      "skills_choices": 2,
+      "skills_options": ["Arcana", "History", "Nature", "Religion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument", "Artisan's Tools"],
+      "tool_choices": 1
+    },
+    "Marine": {
+      "skills": ["Athletics", "Survival"],
+      "languages": [],
+      "tools": ["Vehicle (Water)", "Vehicle (Land)"]
+    },
+    "Mercenary Veteran": {
+      "skills": ["Athletics", "Persuasion"],
+      "languages": [],
+      "tools": ["Vehicle (Land)", "Gaming Set"],
+      "tool_choices": 1
+    },
+    "Noble": {
+      "skills": ["History", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Gaming Set"],
+      "tool_choices": 1
+    },
+    "Outlander": {
+      "skills": ["Athletics", "Survival"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument"],
+      "tool_choices": 1
+    },
+    "Pirate": {
+      "skills": ["Athletics", "Perception"],
+      "languages": [],
+      "tools": ["Navigator's Tools", "Vehicle (Water)"]
+    },
+    "Rewarded": {
+      "skills": ["Insight", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Gaming Set"],
+      "tool_choices": 1
+    },
+    "Ruined": {
+      "skills": ["Stealth", "Survival"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Gaming Set"],
+      "tool_choices": 1
+    },
+    "Rune Carver": {
+      "skills": ["Perception", "History"],
+      "languages": ["Giant"],
+      "tools": ["Artisan's Tools"],
+      "tool_choices": 1
+    },
+    "Sage": {
+      "skills": ["Arcana", "History"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 2,
+      "tools": []
+    },
+    "Sailor": {
+      "skills": ["Athletics", "Perception"],
+      "languages": [],
+      "tools": ["Navigator's Tools", "Vehicle (Water)"]
+    },
+    "Shipwright": {
+      "skills": ["History", "Perception"],
+      "languages": [],
+      "tools": ["Carpenter's Tools", "Vehicle (Water)"]
+    },
+    "Smuggler": {
+      "skills": ["Deception", "Athletics"],
+      "languages": [],
+      "tools": ["Vehicle (Water)"]
+    },
+    "Soldier": {
+      "skills": ["Athletics", "Intimidation"],
+      "languages": [],
+      "tools": ["Gaming Set", "Vehicle (Land)"]
+    },
+    "Spy": {
+      "skills": ["Deception", "Stealth"],
+      "languages": [],
+      "tools": ["Gaming Set", "Thieves' Tools"]
+    },
+    "Urban Bounty Hunter": {
+      "skills": ["Deception", "Insight", "Persuasion", "Stealth"],
+      "skills_choices": 2,
+      "languages": [],
+      "tools": ["Gaming Set", "Musical Instrument", "Thieves' Tools"],
+      "tool_choices": 2
+    },
+    "Urchin": {
+      "skills": ["Sleight of Hand", "Stealth"],
+      "languages": [],
+      "tools": ["Disguise Kit", "Thieves' Tools"]
+    },
+    "Uthgardt Tribe Member": {
+      "skills": ["Athletics", "Survival"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument", "Artisan's Tools"],
+      "tool_choices": 1
+    },
+    "Waterdhavian Noble": {
+      "skills": ["History", "Persuasion"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument", "Gaming Set"],
+      "tool_choices": 1
+    },
+    "Witchlight Hand": {
+      "skills": ["Sleight of Hand", "Performance"],
+      "languages": ["Common", "Exotic"],
+      "languages_choices": 1,
+      "tools": ["Musical Instrument", "Disguise Kit"],
+      "tool_choices": 1
+    }
+  }
+}
