@@ -1,6 +1,8 @@
 import random
 import json
 import os
+import tkinter as tk
+from tkinter import ttk
 
 # Helper to load JSON from the data directory
 def load_json(filename):
@@ -351,48 +353,120 @@ def get_class_tool_proficiencies(char_class):
     return profs
 
 def get_background_tool_proficiencies(background):
-    """Return a list of tool proficiencies for the given background."""
+    """Return a list of tool proficiencies for the given background, handling group/tag choices."""
     tools = []
-    for tool, info in proficiencies["Tools"].items():
-        if "Backgrounds" in info and background in info["Backgrounds"]:
-            tools.append(tool)
+    bg_obj = proficiencies["Backgrounds"].get(background, {})
+    tool_choices = bg_obj.get("tool_choices", 0)
+    tool_groups = bg_obj.get("tools", [])
+
+    # If tool_choices is set and there are group entries, pick only that many
+    if tool_choices and tool_groups:
+        # Gather all possible tool options from the listed groups/tags
+        possible_tools = []
+        for entry in tool_groups:
+            # If entry is a group/tag, gather all tools with that tag
+            group_tools = [tool for tool, info in proficiencies["Tools"].items()
+                           if "Tags" in info and entry in info["Tags"]]
+            if group_tools:
+                possible_tools.extend(group_tools)
+            else:
+                # If entry is a specific tool, just add it
+                possible_tools.append(entry)
+        # Avoid duplicates and already-chosen tools
+        possible_tools = list(set(possible_tools))
+        if len(possible_tools) <= tool_choices:
+            tools.extend(possible_tools)
+        else:
+            tools.extend(random.sample(possible_tools, tool_choices))
+    else:
+        # If no choices, just add all listed tools (for backgrounds with fixed tools)
+        for entry in tool_groups:
+            # If entry is a group/tag, add one random tool from that group
+            group_tools = [tool for tool, info in proficiencies["Tools"].items()
+                           if "Tags" in info and entry in info["Tags"]]
+            if group_tools:
+                tools.append(random.choice(group_tools))
+            else:
+                tools.append(entry)
     return tools
 
 def get_background_languages(background):
     bg = proficiencies["Backgrounds"].get(background, {})
     chosen_languages = []
-    # Gather all language options by tag
     all_languages = proficiencies.get("Languages", {})
-    # Fixed languages (if any, and not tags)
+
+    # Fixed languages (if any, and not tags or "One/Two of your choice")
     for lang in bg.get("languages", []):
-        # If it's a tag, skip for now
         if lang in ["Common", "Exotic"]:
             continue
-        chosen_languages.append(lang)
+        if lang == "One of your choice":
+            # Pick one language not already chosen
+            pool = [l for l in all_languages if l not in chosen_languages]
+            if pool:
+                choice = random.choice(pool)
+                if choice not in chosen_languages:
+                    chosen_languages.append(choice)
+            continue
+        if lang == "Two of your choice":
+            # Pick two languages not already chosen
+            pool = [l for l in all_languages if l not in chosen_languages]
+            picks = []
+            if len(pool) >= 2:
+                picks = random.sample(pool, 2)
+            else:
+                picks = pool
+            for pick in picks:
+                if pick not in chosen_languages:
+                    chosen_languages.append(pick)
+            continue
+        if lang not in chosen_languages:
+            chosen_languages.append(lang)
+
     # Handle language choices by tag
     num_choices = bg.get("languages_choices", 0)
     tags = [tag for tag in bg.get("languages", []) if tag in ["Common", "Exotic"]]
     if num_choices and tags:
-        # Gather all languages with the specified tags
         language_pool = [
             lang for lang, info in all_languages.items()
             if "Tags" in info and any(tag in info["Tags"] for tag in tags)
         ]
-        # Avoid duplicates
         language_pool = [l for l in language_pool if l not in chosen_languages]
         if len(language_pool) >= num_choices:
             chosen_languages += random.sample(language_pool, num_choices)
         else:
             chosen_languages += language_pool
-    return chosen_languages
 
-def get_race_languages(race):
+    # Remove any duplicates just in case
+    return list(dict.fromkeys(chosen_languages))
+
+def get_race_languages(race, subrace=None):
     all_languages = proficiencies.get("Languages", {})
     race_languages = []
+    race_names = {race}
+    if subrace and subrace != race:
+        race_names.add(subrace)
+    # Collect languages granted by race or subrace
     for lang, info in all_languages.items():
-        if "Races" in info and race in info["Races"]:
+        if "Races" in info and any(r in info["Races"] for r in race_names):
             race_languages.append(lang)
-    return race_languages
+    # Handle "One of your choice" and "Two of your choice" if present in race_languages
+    # Remove them and pick accordingly from available languages
+    picks_needed = 0
+    if "One of your choice" in race_languages:
+        race_languages.remove("One of your choice")
+        picks_needed += 1
+    if "Two of your choice" in race_languages:
+        race_languages.remove("Two of your choice")
+        picks_needed += 2
+    # Pick from all languages not already chosen
+    available = [l for l in all_languages if l not in race_languages]
+    if picks_needed > 0 and available:
+        if len(available) >= picks_needed:
+            race_languages += random.sample(available, picks_needed)
+        else:
+            race_languages += available
+    # Remove duplicates just in case
+    return list(dict.fromkeys(race_languages))
 
 def generate_npc():
     class_roll = random.randint(1, 100)
@@ -495,9 +569,13 @@ def generate_npc():
         all_skills.add(new_skill)
         available_for_class.remove(new_skill)
 
-    # --- Tool proficiency logic (optional: similar overlap handling can be added) ---
+    # --- Tool proficiency logic ---
     tool_profs = set(get_class_tool_proficiencies(char_class) + get_background_tool_proficiencies(background))
-
+    
+    # --- Language proficiency logic ---
+    all_languages = get_background_languages(background) + get_race_languages(race, subrace)
+    all_languages = list(dict.fromkeys(all_languages))
+    all_languages.sort()
 
     return {
         "Name": f"NPC_{random.randint(1, 1000)}",  # Placeholder for name generation
@@ -512,22 +590,68 @@ def generate_npc():
         "Skill Proficiencies": list(all_skills),
         "Tool Proficiencies": list(tool_profs),
         "Spells": get_npc_spells(char_class, char_level) if char_class in ALL_SPELL_SLOTS else None,
-        "Languages": get_background_languages(background) + get_race_languages(race)
+        "Languages": all_languages,
     }
+
+def show_npc_ui(npc):
+    root = tk.Tk()
+    root.title("Generated D&D NPC")
+
+    # Make the window resizable and add a scrollbar
+    frame = ttk.Frame(root, padding="10")
+    frame.pack(fill=tk.BOTH, expand=True)
+    canvas = tk.Canvas(frame)
+    scrollbar = ttk.Scrollbar(frame, orient="vertical", command=canvas.yview)
+    scrollable_frame = ttk.Frame(canvas)
+
+    scrollable_frame.bind(
+        "<Configure>",
+        lambda e: canvas.configure(
+            scrollregion=canvas.bbox("all")
+        )
+    )
+
+    canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+    canvas.configure(yscrollcommand=scrollbar.set)
+
+    canvas.pack(side="left", fill="both", expand=True)
+    scrollbar.pack(side="right", fill="y")
+
+    # Display each field in the NPC
+    row = 0
+    for key, value in npc.items():
+        label = ttk.Label(scrollable_frame, text=f"{key}:", font=("Arial", 10, "bold"))
+        label.grid(row=row, column=0, sticky="nw", padx=5, pady=2)
+        # Display stats in D&D order: STR, DEX, CON, INT, WIS, CHA
+        if key == "Stats" and isinstance(value, dict):
+            stat_order = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
+            stats_text = "\n".join(f"{stat}: {value.get(stat, '-')}" for stat in stat_order)
+            value_label = ttk.Label(scrollable_frame, text=stats_text, wraplength=500, justify="left")
+        elif isinstance(value, dict) or isinstance(value, list):
+            text = json.dumps(value, indent=2, ensure_ascii=False)
+            value_label = ttk.Label(scrollable_frame, text=text, wraplength=500, justify="left")
+        else:
+            text = str(value)
+            value_label = ttk.Label(scrollable_frame, text=text, wraplength=500, justify="left")
+        value_label.grid(row=row, column=1, sticky="nw", padx=5, pady=2)
+        row += 1
+
+    root.mainloop()
 
 # Generate example NPC
 n = generate_npc()
+show_npc_ui(n)
 print(n)
 #TODO: Add a way to save the generated NPC to a file
 #TODO: Add a way to load the generated NPC from a file
 #TODO: Add a way to edit the generated NPC
 #TODO: Add a way to delete the generated NPC
 #TODO: Add a way to view the generated NPC
-#TODO: Change the way stats are displayed to follow D&D Conventions
 #TODO: Maybe add a chatgpt wrapper to allow for more complex backstories
 #TODO: Items and equipment
 #TODO: Subclasses that add spells to character
 #TODO: FEATS
 #TODO: Add a way to generate a full character sheet
 #TODO: Factions and Guilds
+#TODO: Names list (nathan is making a names list)
 #TODO: FULL ADVENTURE GENERATOR
