@@ -13,6 +13,7 @@ all_spells = load_json("all_spells.json")
 ALL_SPELL_SLOTS = load_json("spell_slots.json")
 proficiencies = load_json("proficiencies.json")
 backstories = load_json("backstories.json")
+feats = load_json("feats.json")
 
 
 # This code is part of a character generator for Dungeons & Dragons 5th Edition.
@@ -295,12 +296,27 @@ def generate_stats_with_race(class_name, race_name, subrace):
 
     return base_stats
 
-def ability_score_increase(stats, char_level):
+def ability_score_increase_or_feat(stats, char_level, feats_taken=None):
     # Ability Score Increases at 4, 8, 12, 16, 19
     asi_levels = [4, 8, 12, 16, 19]
+    if feats_taken is None:
+        feats_taken = []
     for lvl in asi_levels:
         if char_level >= lvl:
-            # Find two stats below 20, prioritize highest stats first
+            # 70% chance for stat increase, 30% for feat (adjust as desired)
+            if random.random() < 0.3:
+                feat = choose_random_feat(stats)
+                if feat and feat["name"] not in feats_taken:
+                    feats_taken.append(feat["name"])
+                    # Apply stat increase if the feat grants one
+                    if "stat_increase_choice" in feat:
+                        options = feat["stat_increase_choice"]["options"]
+                        stat = random.choice(options)
+                        amount = feat["stat_increase_choice"]["amount"]
+                        stats[stat] = min(20, stats.get(stat, 0) + amount)
+                    # You could add more logic here to apply other feat effects
+                    continue  # Skip normal stat increase if feat is taken
+            # Stat increase (as before)
             stats_below_20 = sorted([(k, v) for k, v in stats.items() if v < 20], key=lambda x: -x[1])
             if len(stats_below_20) == 0:
                 break  # All stats at 20
@@ -309,6 +325,7 @@ def ability_score_increase(stats, char_level):
             else:
                 stats[stats_below_20[0][0]] = min(20, stats_below_20[0][1] + 1)
                 stats[stats_below_20[1][0]] = min(20, stats_below_20[1][1] + 1)
+    return feats_taken
 
 def get_class_skill_proficiencies(char_class):
     """Return a list of skill proficiencies for the given class, randomly chosen as per class rules."""
@@ -328,6 +345,25 @@ def get_background_skill_proficiencies(background):
             skills.append(skill)
     return skills
 
+def choose_random_feat(stats):
+    """Choose a random feat that meets prerequisites (very basic check)."""
+    # Only check stat prerequisites for now
+    available_feats = []
+    for feat in feats:
+        prereqs = feat.get("prerequisite", [])
+        meets_prereq = True
+        for prereq in prereqs:
+            # Check for stat prerequisites like "Strength 13 or higher"
+            if "13 or higher" in prereq:
+                for stat in ["STR", "DEX", "CON", "INT", "WIS", "CHA"]:
+                    if stat in prereq and stats.get(stat, 0) < 13:
+                        meets_prereq = False
+            # Add more checks as needed for other types of prerequisites
+        if meets_prereq:
+            available_feats.append(feat)
+    if available_feats:
+        return random.choice(available_feats)
+    return None
 
 def get_class_tool_proficiencies(char_class):
     """Return a list of tool proficiencies for the given class, randomly chosen as per class rules."""
@@ -494,58 +530,59 @@ def generate_npc():
 
     stats = generate_stats_with_race(char_class, race, subrace)
     char_level = random.randint(1, 20)
+    feats_taken = []
 
     match char_class:
         case "Wizard":
             if char_level > 2:
                 subclass = random.choice(subclass_table["Wizard"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Sorcerer":
             if char_level > 2:
                 subclass = random.choice(subclass_table["Sorcerer"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Warlock":
             subclass = random.choice(subclass_table["Warlock"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Cleric":
             subclass = random.choice(subclass_table["Cleric"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Druid":
             if char_level > 2:
                 subclass = random.choice(subclass_table["Druid"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Paladin":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Paladin"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Ranger":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Ranger"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Fighter":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Fighter"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Monk":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Monk"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Barbarian":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Barbarian"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Rogue":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Rogue"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Bard":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Bard"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case "Artificer":
             if char_level > 3:
                 subclass = random.choice(subclass_table["Artificer"])
-            ability_score_increase(stats, char_level)
+            feats_taken = ability_score_increase_or_feat(stats, char_level)
         case _:
             pass  # Placeholder for class-specific features
 
@@ -589,6 +626,7 @@ def generate_npc():
         "Background": background,
         "Skill Proficiencies": list(all_skills),
         "Tool Proficiencies": list(tool_profs),
+        "Feats": feats_taken if feats_taken else None,
         "Spells": get_npc_spells(char_class, char_level) if char_class in ALL_SPELL_SLOTS else None,
         "Languages": all_languages,
     }
@@ -627,6 +665,17 @@ def show_npc_ui(npc):
             stat_order = ["STR", "DEX", "CON", "INT", "WIS", "CHA"]
             stats_text = "\n".join(f"{stat}: {value.get(stat, '-')}" for stat in stat_order)
             value_label = ttk.Label(scrollable_frame, text=stats_text, wraplength=500, justify="left")
+        # Show feats as a readable list with descriptions if available
+        elif key == "Feats" and value:
+            feats_display = ""
+            for feat_name in value:
+                # Try to find the feat in the feats list for description
+                feat_obj = next((f for f in feats if f["name"] == feat_name), None)
+                if feat_obj:
+                    feats_display += f"{feat_obj['name']}: {feat_obj.get('description', '')}\n"
+                else:
+                    feats_display += f"{feat_name}\n"
+            value_label = ttk.Label(scrollable_frame, text=feats_display.strip(), wraplength=500, justify="left")
         elif isinstance(value, dict) or isinstance(value, list):
             text = json.dumps(value, indent=2, ensure_ascii=False)
             value_label = ttk.Label(scrollable_frame, text=text, wraplength=500, justify="left")
@@ -650,7 +699,6 @@ print(n)
 #TODO: Maybe add a chatgpt wrapper to allow for more complex backstories
 #TODO: Items and equipment
 #TODO: Subclasses that add spells to character
-#TODO: FEATS
 #TODO: Add a way to generate a full character sheet
 #TODO: Factions and Guilds
 #TODO: Names list (nathan is making a names list)
